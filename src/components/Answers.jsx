@@ -3,7 +3,7 @@ import { checkHeading, replaceHeadingStars } from "../helper";
 
 
 
-const Answer = ({ ans,totalResult, index}) => {
+const Answer = ({type, ans,totalResult, index}) => {
 
     const [heading, setHeading] = useState(false)
     const [answer, setAnswer] = useState(ans);
@@ -23,7 +23,7 @@ const Answer = ({ ans,totalResult, index}) => {
         <>
         {
             index==0 && totalResult>1 ? <span className="text-2xl text-white">{answer}</span>:
-            heading? <span className="pt-2 text-lg block text-white">{answer}</span>: <span className='pl-5'>{answer}</span>
+            heading? <span className="pt-2 text-lg block text-white">{answer}</span>: <span className={type=='q'?'pl-1': 'pl-5'}>{answer}</span>
         }
             {/* {ans} */}
             

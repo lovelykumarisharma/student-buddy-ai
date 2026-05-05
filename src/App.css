@@ -1,0 +1,8 @@
+.mcontainer::-webkit-scrollbar {
+  display: none;
+}
+
+.mcontainer {
+  -ms-overflow-style: none;  /* IE/Edge */
+  scrollbar-width: none;     /* Firefox */
+}
